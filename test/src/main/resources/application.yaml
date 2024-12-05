@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: demo
+  devtools:
+    add-properties: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/shoptest
+    username: root
+    password: 12345678
+    hikari:
+      minimum-idle: 5
+      maximum-pool-size: 10
+      idle-timeout: 30000
+      pool-name: HikariCP
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+server:
+  port: 8080
