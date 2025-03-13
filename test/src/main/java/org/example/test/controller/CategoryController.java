@@ -17,7 +17,6 @@ import java.util.List;
 @RestController
 public class CategoryController {
     final CategoryService categoryService;
-
     @GetMapping(value = Uri.category)
     public ResponseEntity GetAllCategory(){
         List<CategoryDto> rs = categoryService.getAll();

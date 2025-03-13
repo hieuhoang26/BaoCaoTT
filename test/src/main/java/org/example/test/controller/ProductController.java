@@ -56,6 +56,26 @@ public class ProductController {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
     }
+    @PutMapping(value = Uri.product)
+    public ResponseEntity putProduct(@ModelAttribute CreateProduct request) {
+        try {
+            String id = productService.create(request);
+            return new ResponseEntity<>(id, HttpStatus.OK);
+        } catch (Exception e) {
+            log.error("Error occurred while fetching all products", e);
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+    }
+    @DeleteMapping(value = Uri.product)
+    public ResponseEntity putProduct(@RequestParam Integer id ) {
+        try {
+//            String id = productService.create(request);
+            return new ResponseEntity<>(id, HttpStatus.OK);
+        } catch (Exception e) {
+            log.error("Error occurred while fetching all products", e);
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+    }
 
 
 

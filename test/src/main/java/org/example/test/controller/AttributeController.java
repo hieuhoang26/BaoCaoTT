@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-public class Attribute {
+public class AttributeController {
     final AttributeTypeService attributeTypeService;
     @GetMapping(Uri.att)
     public List<AttributeTypeDTO> getAllAttributes() {

@@ -18,7 +18,7 @@ const Header = () => {
             <Nav.Link href="/" className="active">
               Home
             </Nav.Link>
-            <Nav.Link href="/">About</Nav.Link>
+            {/* <Nav.Link href="/">About</Nav.Link> */}
           </Nav>
 
           {/* Cart Button */}
@@ -27,9 +27,9 @@ const Header = () => {
               <Nav.Link href="cart">
                 <FaShoppingCart className="me-1" size={24} />
                 Cart
-                <span className="badge bg-dark text-white ms-1 rounded-pill">
+                {/* <span className="badge bg-dark text-white ms-1 rounded-pill">
                   0
-                </span>
+                </span> */}
               </Nav.Link>
             </Button>
           </form>

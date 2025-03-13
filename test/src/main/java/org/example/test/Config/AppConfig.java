@@ -14,7 +14,7 @@ public class AppConfig implements WebMvcConfigurer {
         WebMvcConfigurer.super.addCorsMappings(registry);
         registry.addMapping("/**")
                 .allowCredentials(true)
-//                .allowedOrigins("http://localhost:8080")
+                .allowedOrigins("http://localhost:8080")
                 .allowedOrigins("http://127.0.0.1:3000","http://localhost:8080","http://localhost:5173")
                 .allowedMethods("*")
                 .allowCredentials(true)
